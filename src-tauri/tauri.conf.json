@@ -6,7 +6,7 @@
     "distDir": "../dist"
   },
   "package": {
-    "productName": "hello_world",
+    "productName": "tim_duel",
     "version": "0.0.0"
   },
   "tauri": {
@@ -19,7 +19,7 @@
     },
     "windows": [
       {
-        "title": "hello_world",
+        "title": "tim_duel",
         "width": 800,
         "height": 600
       }
