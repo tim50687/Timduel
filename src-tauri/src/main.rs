@@ -3,6 +3,7 @@
 
 mod nba_api;
 use nba_api::TodayMatches;
+use chrono;
 // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
 #[tauri::command]
 fn greet(name: &str) -> String {
@@ -16,7 +17,7 @@ async fn main() {
     //     .run(tauri::generate_context!())
     //     .expect("error while running tauri application");
 
-    let today_matches = TodayMatches::new();
-    today_matches.get_today_matches().await.unwrap();
-    // println!("Hello, world!");
+    let mut today_matches = TodayMatches::new();
+    let matches = today_matches.get_today_matches().await.unwrap();
+    println!("{:?}", matches);
 }
